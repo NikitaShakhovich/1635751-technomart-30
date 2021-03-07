@@ -546,10 +546,11 @@ body {
 }
 .slide-1 {
   background-image: url("../img/perforator.jpg");
+  display: none;
 }
 .slide-2 {
   background-image: url("../img/drill.jpg");
-  display: none;
+
 }
 .slider-controls {
   position: absolute;
@@ -589,6 +590,25 @@ body {
 .text-slider h2, .text-slider p {
   display: flex;
   flex-direction: column;
+}
+.gallery-button-back {
+  position: absolute;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transform: rotate(180deg);
+  top: 263px;
+  left: 15px;
+  border: none;
+}
+.gallery-button-next {
+  position: absolute;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 263px;
+  right: 329px;
+  border: none;
 }
 .categories-item a {
   font-size: 14px;
@@ -734,8 +754,11 @@ body {
 .popular-product-list li:nth-child(4n) {
   margin-right: 0;
 }
-.catalog-item  {
-  border: 1px solid var(--basic-border-product);
+.item-new {
+  /*position: absolute;*/
+  background-image: url("../img/icons/icon-catalog-new.svg");
+  background-position: 148px 0;
+  background-repeat: no-repeat;
 }
 .catalog-item p {
   font-family: 'PT Sans', sans-serif;
@@ -1743,16 +1766,18 @@ body {
   cursor: pointer;
 }
 .catalog-item {
-    min-height: 318px;
-    width: 220px;
-    margin-right: 20px;
-    padding: 16px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    box-sizing: border-box;
+  min-height: 318px;
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid var(--basic-border-product);
 }
 .catalog-list li:nth-child(3n) {
   margin-right: 0;
@@ -1772,7 +1797,7 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 60px;
-  margin-top: 50px;
+  margin-top: 27px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
