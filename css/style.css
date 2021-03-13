@@ -40,6 +40,7 @@
 
   /* Variables background block categories catalog */
 
+  --basic-footer-bg: #F4F4F4;
   --basic-category-materials: #FFBF47;
   --basic-category-tools: #3BBCE3;
   --basic-category-technic: #DC91D8;
@@ -48,10 +49,12 @@
   --basic-category-perforators: rgba(0, 0, 0, 0.25);
 
   /* Variables border color and shadow */
+  --basic-input-border: #C5C5C5;
   --basic-white-rgba: rgba(255, 255, 255, 0.3);
   --basic-hover-rgba: rgba(77.3, 77.3, 77.3, 0.3);
   --basic-active-rgba: rgba(169, 169, 169, 0.3);
   --basic-footer-active: rgba(241, 245, 247, 0.5);
+  --basic-modal: rgba(0, 0, 0, 0.15);
   --basic-filters-border: rgba(0, 0, 0, 0.0001);
   --basic-border-product: #EAEAEA;
   --basic-shadow-buy: #367315;
@@ -112,7 +115,8 @@ body {
 .footer-navigation-item a,
 .footer-contact a,
 .navigation-catalog-item a,
-.social-item a {
+.social-item a,
+.modal-block a {
   text-decoration: none;
 }
 /* GRID */
@@ -125,7 +129,7 @@ body {
   background-color: var(--basic-block-service);
   margin: 0;
 }
-.smooth, .container {
+.container {
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
@@ -602,6 +606,7 @@ body {
   border: none;
 }
 .gallery-button-next {
+  display: flex;
   position: absolute;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -721,6 +726,20 @@ body {
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--basic-button-rest);
+}
+.button-white {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+.button-white:hover,
+.button-white:focus {
+  color: var(--basic-hover);
+}
+.button-white:active {
+  color: var(--basic-click);
 }
 .button-red:hover,
 .button-red:focus {
@@ -1846,4 +1865,121 @@ body {
 .description-perforators p {
   margin: 0;
   padding-bottom: 60px;
+}
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--basic-white-rgba);
+  z-index: 21;
+}
+.modal.opened {
+  display: flex;
+}
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+.modal-close:after {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/icons/icon-close.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.modal-dimmer {
+}
+.modal-container {
+  border-top: 6px solid var(--basic-button-rest);
+  position: relative;
+  width: 620px;
+  background: var(--basic-white);
+  box-shadow: 0 4px 20px var(--basic-modal);
+}
+.modal-block {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-footer a {
+  padding: 11px 11px 9px;
+  width: 192px;
+  text-align: center;
+  margin: 0 5px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.modal-block input {
+  width: 220px;
+}
+.modal-block textarea {
+  width: 460px;
+}
+.modal-form {
+  padding: 22px 80px 21px;
+}
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 37px;
+  background: var(--basic-footer-bg);
+}
+.modal-footer button {
+  width: 400px;
+  padding: 9px 10px 7px;
+  border: none;
+}
+.custom-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--basic-black);
+  margin: 0 0 25px;
+}
+.custom-input,
+.custom-textarea {
+  box-sizing: border-box;
+  padding: 7px 12px;
+  margin: 18px 0 0;
+  border: 2px solid var(--basic-input-border);
+  resize: none;
+}
+
+.success-adding {
+  margin: 60px auto 50px;
+  position: relative;
+  font-family: Cuprum, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-black);
+}
+.success-adding:after {
+  position: absolute;
+  left: -80px;
+  top: -20px;
+  content: "";
+  display: block;
+  width: 66px;
+  height: 66px;
+  background-image: url("../img/icons/icon-ok.svg");
+  background-repeat: no-repeat;
 }

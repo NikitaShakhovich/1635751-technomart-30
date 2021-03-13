@@ -15,7 +15,7 @@
 <body class="page-body">
 <header class="main-header">
   <div class="main-bar">
-    <section class="smooth container">
+    <section class="container">
       <section class="background-header">
         <div class="main-logo">
           <a class="logo-img">
@@ -253,7 +253,7 @@
     </section>
   </div>
   <section class="service">
-    <div class="smooth container">
+    <div class="container">
       <div class="grid-service">
         <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
@@ -289,7 +289,7 @@
       </div>
     </div>
   </section>
-  <div class="tehnomart-information smooth container">
+  <div class="tehnomart-information container">
     <section class="description-company">
       <h2>КОМПАНИЯ «Техномарт»</h2>
       <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
@@ -413,6 +413,35 @@
     </section>
   </div>
 </footer>
+
+<section class="modal modal-dimmer opened">
+  <div class="modal-container">
+    <form  method="get" action="https://echo.htmlacademy.ru/">
+      <button type="button" class="modal-close"></button>
+      <div class="modal-form">
+        <div class="modal-block">
+          <label class="custom-label">
+            Ваше имя:
+            <input type="text" class="custom-input" placeholder="Имя Фамилия">
+          </label>
+          <label class="custom-label">
+            Ваш e-mail:
+            <input type="text" class="custom-input" placeholder="email@example.com">
+          </label>
+        </div>
+        <div class="modal-block">
+          <label class="custom-label">
+            Текст письма:
+            <textarea class="custom-textarea" rows="6" placeholder="В свободной форме"></textarea>
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="button-red">Отправить</button>
+      </div>
+    </form>
+  </div>
+</section>
 </body>
 </html>
 
