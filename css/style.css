@@ -102,7 +102,7 @@ body {
 .categories-technics a,
 .categories-sale a,
 .categories-delivery a,
-.categories-perforators a,
+.slider-item a,
 .block-popular a,
 .hover-button a,
 .popular-manufacturer-item a,
@@ -527,16 +527,58 @@ body {
   top: 320px;
   left: 810px;
 }
-.categories-perforators {
-  grid-area: o4;
-  background-image: url("../img/perforator.jpg");
-  width: 620px;
-  height: 266px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.slider {
+  position: relative;
+}
+.categories-slider {
   padding: 0 0 0 0;
   margin: 0 0 0 0;
+  grid-area: o4;
+}
+.categories-slider ul {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  list-style: none;
+}
+.slider-list li {
+  width: 620px;
+  height: 266px;
+}
+.slide-1 {
+  background-image: url("../img/perforator.jpg");
+  display: none;
+}
+.slide-2 {
+  background-image: url("../img/drill.jpg");
+
+}
+.slider-controls {
+  position: absolute;
+  bottom: 36px;
+  right: 618px;
+  z-index: 20;
+  width: 30px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.slider-controls button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-controls .current {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-hover);
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  cursor: pointer;
 }
 .text-slider {
   width: 620px;
@@ -548,6 +590,25 @@ body {
 .text-slider h2, .text-slider p {
   display: flex;
   flex-direction: column;
+}
+.gallery-button-back {
+  position: absolute;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transform: rotate(180deg);
+  top: 263px;
+  left: 15px;
+  border: none;
+}
+.gallery-button-next {
+  position: absolute;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 263px;
+  right: 329px;
+  border: none;
 }
 .categories-item a {
   font-size: 14px;
@@ -585,21 +646,24 @@ body {
 .categories-list a:active{
   background-color: var(--basic-active-rgba);
 }
-.categories-perforators h2 {
+.text-slider h2 {
   /*background-color: var(--basic-category-perforators);*/
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0;
-  margin: 0 0 0 24px;
+  padding: 23px 0 0 22px;
+  margin: 0 0 0 0;
 }
-.categories-perforators p {
+.text-slider p {
   /*background-color: var(--basic-category-perforators);*/
-  padding: 0;
-  margin: 0 0 0 24px;
+  padding: 0 0 0 24px;
+  margin: 0 0 0 0;
 }
-.categories-perforators a {
+.slider-item a {
+  position: absolute;
+  bottom: 27px;
+  left: 0;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
@@ -614,11 +678,11 @@ body {
   width: 192px;
   height: 38px;
 }
-.categories-perforators a:hover,
-.categories-perforators a:focus {
+.slider-item a:hover,
+.slider-item a:focus {
   background-color: var(--basic-button-hover);
 }
-.categories-perforators a:active {
+.slider-item a:active {
   background-color: var(--basic-button-click);
 }
 
@@ -690,8 +754,11 @@ body {
 .popular-product-list li:nth-child(4n) {
   margin-right: 0;
 }
-.catalog-item  {
-  border: 1px solid var(--basic-border-product);
+.item-new {
+  /*position: absolute;*/
+  background-image: url("../img/icons/icon-catalog-new.svg");
+  background-position: 148px 0;
+  background-repeat: no-repeat;
 }
 .catalog-item p {
   font-family: 'PT Sans', sans-serif;
@@ -1699,16 +1766,18 @@ body {
   cursor: pointer;
 }
 .catalog-item {
-    min-height: 318px;
-    width: 220px;
-    margin-right: 20px;
-    padding: 16px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    box-sizing: border-box;
+  min-height: 318px;
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid var(--basic-border-product);
 }
 .catalog-list li:nth-child(3n) {
   margin-right: 0;
@@ -1728,7 +1797,7 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 60px;
-  margin-top: 50px;
+  margin-top: 27px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
