@@ -156,15 +156,15 @@ body {
   background-color: var(--basic-header-rest);
   width: 271px;
   height: 42px;
-  padding-left: 35px;
+  padding-left: 43px;
   border: none;
 }
 .main-search input::placeholder {
   color: var(--basic-white);
 }
 .main-search svg {
-  top: 13px;
-  left: 11px;
+  top: 12px;
+  left: 18px;
   position: absolute;
 }
 .main-search input:focus + svg path {
@@ -188,7 +188,7 @@ body {
   justify-content: space-between;
 }
 .main-cart .bookmark, .main-cart .cart {
-  padding: 0 25px 0 51px;
+  padding: 1px 29px 0 47px;
   position: relative;
 }
 .bookmark::before {
@@ -197,7 +197,7 @@ body {
   width: 16px;
   height: 18px;
   top: 13px;
-  left: 24px;
+  left: 21px;
   background-image: url("../img/icons/icon-bookmark.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -214,20 +214,13 @@ body {
   justify-content: space-between;
   padding: 40px 0 40px;
 }
-.info-contact {
-  width: 270px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
 .info-contact .head-phone::before {
   content: "";
   position: absolute;
   width: 16px;
   height: 18px;
-  top: 9px;
-  left: 24px;
+  top: 16px;
+  left: 50px;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-image: url("../img/icons/icon-phone.svg");
@@ -299,19 +292,30 @@ body {
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
-  width: 197px;
 }
-.head-title p, .head-contact p {
+.head-title p {
   margin: 0;
-  padding: 0;
+  padding: 5px 0 0 30px;
+}
+.info-contact {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+  padding: 4px 0 0 10px;
+}
+.info-address {
+  padding: 1px 0 0px 10px;
+  margin: 1px -3px 0px -3px;
 }
 .head-contact{
   color: var(--basic-block-popular);
   font-size: 14px;
   line-height: 24px;
   text-align: center;
-  padding: 0;
-  margin: 0;
+  padding: 2px 0 0px 12px;
+  margin: 1px -4px 0px -3px;
 }
 .head-phone {
   margin: 0;
@@ -320,19 +324,20 @@ body {
   line-height: 30px;
   font-weight: bold;
   border: 3px solid var(--basic-white);
-  padding: 0 50px;
+  padding: 3px 0 6px 30px;
+  box-sizing: border-box;
 }
 .login-enter {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 24px 0 50px;
+  padding: 0 27px 0 45px;
 }
 .login-enter::before {
   content: "";
   position: absolute;
-  top: 14px;
-  left: 14px;
+  top: 12px;
+  left: 18px;
   height: 18px;
   width: 20px;
   background-repeat: no-repeat;
@@ -347,17 +352,17 @@ body {
   background-image: url("../img/icons/icon-login.svg");
 }
 .login-reg {
-  width: 150px;
-  margin-left: 10px;
+  width: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 10px;
+  padding: 10px 10px 10px 10px;
   text-align: center;
+  margin: 0px 0 0px 10px;
 }
 .login {
   display: flex;
-  margin: 0;
+  margin: 8px 0 0 0;
   padding: 0;
   position: relative;
 }
