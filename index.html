@@ -281,7 +281,6 @@
               к вашему подъезду совершенно бесплатно!<br>
               Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!</p>
-            <span class="img-delivery"></span>
           </li>
     <!--      <li class="description-guarantee"><h2>Гарантия</h2></li>-->
     <!--      <li class="description-credit"><h2>Кредит</h2></li>-->
@@ -414,10 +413,11 @@
   </div>
 </footer>
 
-<section class="modal modal-dimmer opened">
+<section class="modal modal-dimmer"> <!--  opened-->
+  <!--  <h2 class="visually-hidden">Вход в личный кабинет</h2>-->
   <div class="modal-container">
+    <button type="button" class="modal-close" aria-label="Закрыть"></button>
     <form  method="get" action="https://echo.htmlacademy.ru/">
-      <button type="button" class="modal-close"></button>
       <div class="modal-form">
         <div class="modal-block">
           <label class="custom-label">
@@ -440,6 +440,19 @@
         <button type="submit" class="button-red">Отправить</button>
       </div>
     </form>
+  </div>
+</section>
+<section class="modal modal-dimmer modal-map">
+  <div class="modal-container">
+    <!--  <h2 class="visually-hidden">Как до нас добраться</h2>-->
+    <button type="button" class="modal-close" aria-label="Закрыть"></button>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.373096298493!2d30.313942329931177!3d59.93889091986354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1616053872877!5m2!1sru!2sby"
+      width="943"
+      height="449"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"></iframe>
   </div>
 </section>
 </body>
