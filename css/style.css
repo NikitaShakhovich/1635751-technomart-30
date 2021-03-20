@@ -166,17 +166,19 @@ body {
   top: 12px;
   left: 18px;
   position: absolute;
-  opacity: 0.3;
 }
-.main-search input:focus + svg path,
-.main-search input:focus + svg {
+.main-search path {
+  opacity: 0.3;
+  fill: white;
+}
+.main-search input:focus + svg path {
   fill: var(--basic-button-rest);
   opacity: 1;
 }
-/*.main-search input:hover + svg path {*/
-/*  fill: var(--basic-white);*/
-/*  opacity: 1;*/
-/*}*/
+.main-search input:hover:not(:focus) + svg path {
+ fill: var(--basic-white);
+ opacity: 1;
+}
 .main-search input:focus {
   background-color: var(--basic-white);
 }
@@ -445,8 +447,7 @@ body {
 }
 .head-navigation {
   background: var(--basic-nav-rest);
-  margin-bottom: 60px;
-
+  margin-bottom: 61px;
 }
 .head-navigation a:hover,
 .head-navigation a:focus{
@@ -644,7 +645,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 4px 0 4px 0px;
-  margin: -3px 0 0px 23px;
+  margin: 0px 0 0px 23px;
   width: 135px;
   box-sizing: border-box;
 }
@@ -663,7 +664,7 @@ body {
   line-height: 30px;
   font-weight: bold;
   padding: 0;
-  margin: 20px 0 18px 24px;
+  margin: 21px 0 13px 24px;
 }
 .categories-list a:hover,
 .categories-list a:focus {
@@ -688,15 +689,15 @@ body {
 }
 .slider-item a {
   position: absolute;
-  bottom: 23px;
-  left: 0;
+  bottom: 27px;
+  left: 24px;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--basic-button-rest);
-  margin: 8px 0px 6px 24px;
-  padding: 11px 0px 9px 0px;
+  margin: 0;
+  padding: 10px 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -719,7 +720,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 940px;
-  padding: 25px 0;
+  padding: 24px 0 26px;
   box-sizing: border-box;
 }
 .block-popular a {
@@ -1129,7 +1130,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 60px;
-  margin-bottom: 70px;
+  margin-bottom: 68px;
 }
 .description-company h2 {
   color: var(--basic-black);
