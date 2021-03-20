@@ -274,8 +274,8 @@
               Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!</p>
           </li>
-    <!--      <li class="description-guarantee"><h2>Гарантия</h2></li>-->
-    <!--      <li class="description-credit"><h2>Кредит</h2></li>-->
+          <!--      <li class="description-guarantee"><h2>Гарантия</h2></li>-->
+          <!--      <li class="description-credit"><h2>Кредит</h2></li>-->
         </ul>
       </div>
     </div>
@@ -303,9 +303,9 @@
         заехав в наш офис:
       </p>
       <p>
-      <img src="img/map.svg" width="300" height="158" alt="maps">
+        <img class="map-open" src="img/map.svg" width="300" height="158" alt="maps">
       </p>
-      <a class="button-red" href="mailto:mail@htmlacademy.ru">Заблудились? Напишите нам!</a>
+      <a class="button-red feedback-button" href="mailto:mail@htmlacademy.ru">Заблудились? Напишите нам!</a>
     </section>
   </div>
 </main>
@@ -404,26 +404,26 @@
     </section>
   </div>
 </footer>
-<section class="modal modal-dimmer"> <!--  opened-->
+<section class="modal modal-dimmer modal-feedback"> <!--  opened-->
   <h2 class="visually-hidden">Вход в личный кабинет</h2>
   <div class="modal-container">
     <button type="button" class="modal-close" aria-label="Закрыть"></button>
-    <form  method="get" action="https://echo.htmlacademy.ru/">
+    <form class="feedback-form" method="get" action="https://echo.htmlacademy.ru/">
       <div class="modal-form">
         <div class="modal-block">
           <label class="custom-label">
             Ваше имя:
-            <input type="text" class="custom-input" placeholder="Имя Фамилия">
+            <input type="text" class="custom-input feedback-name" placeholder="Имя Фамилия">
           </label>
           <label class="custom-label">
             Ваш e-mail:
-            <input type="text" class="custom-input" placeholder="email@example.com">
+            <input type="text" class="custom-input feedback-email" placeholder="email@example.com">
           </label>
         </div>
         <div class="modal-block">
           <label class="custom-label">
             Текст письма:
-            <textarea class="custom-textarea" rows="6" placeholder="В свободной форме"></textarea>
+            <textarea class="custom-textarea feedback-message" rows="6" placeholder="В свободной форме"></textarea>
           </label>
         </div>
       </div>
@@ -442,6 +442,7 @@
       width="943" height="449" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>
+<script src="js/form.js"></script>
 </body>
 </html>
 
