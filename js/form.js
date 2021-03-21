@@ -1,11 +1,14 @@
 const feedbackLink = document.querySelector(".feedback-button");
 const mapLink = document.querySelector(".map-open");
+const cartLink = document.querySelector(".emerging-buy");
 
 const feedbackModal = document.querySelector(".modal-feedback");
 const mapModal = document.querySelector(".modal-map");
+const cartModal = document.querySelector(".modal-cart");
 
 const feedbackModalClose = feedbackModal.querySelector(".modal-feedback .modal-close");
 const mapModalClose = mapModal.querySelector(".modal-map .modal-close");
+const cartModalClose = cartModal.querySelector(".modal-cart .modal-close");
 
 const feedbackForm = feedbackModal.querySelector(".feedback-form");
 const feedbackInputName = feedbackModal.querySelector(".feedback-name");
@@ -40,6 +43,10 @@ mapLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   mapModal.classList.add("opened");
 });
+cartLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  cartModal.classList.add("opened");
+});
 
 feedbackModalClose.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -49,6 +56,10 @@ feedbackModalClose.addEventListener("click", function (evt) {
 mapModalClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   mapModal.classList.remove("opened");
+});
+cartModalClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  cartModal.classList.remove("opened");
 });
 
 feedbackForm.addEventListener("submit", function (evt) {
@@ -75,6 +86,10 @@ window.addEventListener("keydown", function (evt) {
     if (mapModal.classList.contains("opened")) {
       evt.preventDefault();
       mapModal.classList.remove("opened");
+    }
+    if (cartModal.classList.contains("opened")) {
+      evt.preventDefault();
+      cartModal.classList.remove("opened");
     }
   }
 });
