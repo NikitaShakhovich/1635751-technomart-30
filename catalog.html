@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru" xmlns="http://www.w3.org/1999/html">
+<html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Каталог - «Техномарт»</title>
@@ -10,7 +10,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/180.png">
-  <link rel="manifest" href="manifest.webmanifest">
+<!--  <link rel="manifest" href="manifest.webmanifest">-->
 </head>
 <body class="page-body">
 <header class="main-header">
@@ -39,6 +39,7 @@
   </div>
   <div class="container">
     <section class="head-information">
+      <h2 class="visually-hidden">Интернет-магазин cтроительных материалов и инструмента</h2>
       <div class="head-title">
         <p>Интернет-магазин<br>
           строительных материалов<br>
@@ -122,27 +123,33 @@
       <h3 class="background-sorting">Сортировка:</h3>
       <div class="flex-sorting">
       <ul class="sorting-list">
-        <li class="sorting-item sorting-input-checked">
-          <input class="sorting-input-checkbox sorting-input-checked" type="radio" checked name="sorting" value="price" id="sorting-price">
-          <label class="sorting-label" for="sorting-price">по цене</label>
+        <li class="sorting-item">
+          <a class="sorting-select" href="#">по цене</a>
+<!--          <input class="sorting-input-checkbox sorting-input-checked" type="radio" checked name="sorting" value="price" id="sorting-price">-->
+<!--          <label class="sorting-label" for="sorting-price">по цене</label>-->
         </li>
         <li class="sorting-item">
-          <input class="sorting-input-checkbox" type="radio" name="sorting" value="tupe" id="sorting-tupe">
-          <label class="sorting-label" for="sorting-tupe">по типу</label>
+          <a class="sorting-label" href="#">по типу</a>
+<!--          <input class="sorting-input-checkbox" type="radio" name="sorting" value="tupe" id="sorting-tupe">-->
+<!--          <label class="sorting-label" for="sorting-tupe">по типу</label>-->
         </li>
         <li class="sorting-item">
-          <input class="sorting-input-checkbox" type="radio" name="sorting" value="functional" id="sorting-functional">
-          <label class="sorting-label" for="sorting-functional">по функционалу</label>
+          <a class="sorting-label" href="#">по функционалу</a>
+<!--          <input class="sorting-input-checkbox" type="radio" name="sorting" value="functional" id="sorting-functional">-->
+<!--          <label class="sorting-label" for="sorting-functional">по функционалу</label>-->
         </li>
       </ul>
       <ul class="sorting-list-2">
-        <li class="sorting-item sorting-input-checked">
-          <input class="sorting-input-checkbox" type="radio" checked name="topbottom" value="top" id="topbottom-top">
-          <label class="increase" for="topbottom-top"></label>
+        <li class="sorting-item">
+          <a class="select" href="#"></a>
+<!--          class="increase"-->
+<!--          <input class="sorting-input-checkbox" type="radio" checked name="topbottom" value="top" id="topbottom-top">-->
+<!--          <label class="increase" for="topbottom-top"></label>-->
         </li>
         <li class="sorting-item">
-          <input class="sorting-input-checkbox" type="radio" name="topbottom" value="bottom" id="topbottom-bottom">
-          <label class="waning" for="topbottom-bottom"></label>
+          <a class="waning" href="#"></a>
+<!--          <input class="sorting-input-checkbox" type="radio" name="topbottom" value="bottom" id="topbottom-bottom">-->
+<!--          <label class="waning" for="topbottom-bottom"></label>-->
         </li>
       </ul>
       </div>
@@ -449,6 +456,7 @@
   </div>
 </footer>
   <section class="modal modal-dimmer">
+    <h3 class="visually-hidden">Окно добавления товара в корзину</h3>
     <span class="visually-hidden">Статус покупки</span>
     <div class="modal-container">
       <button type="button" class="modal-close" aria-label="Закрыть"></button>
