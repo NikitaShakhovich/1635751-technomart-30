@@ -1,6 +1,5 @@
 const feedbackLink = document.querySelector(".feedback-button");
 const mapLink = document.querySelector(".map-open");
-const cartLink = document.querySelector(".emerging-buy");
 
 const feedbackModal = document.querySelector(".modal-feedback");
 const mapModal = document.querySelector(".modal-map");
@@ -43,10 +42,6 @@ mapLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   mapModal.classList.add("opened");
 });
-cartLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  cartModal.classList.add("opened");
-});
 
 feedbackModalClose.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -73,6 +68,13 @@ feedbackForm.addEventListener("submit", function (evt) {
       localStorage.setItem("name", feedbackInputName.value);
       localStorage.setItem("email", feedbackInputEmail.value);
     }
+  }
+});
+
+window.addEventListener("click", function (evt) {
+  if (evt.target.classList.contains(`emerging-buy`)) {
+    evt.preventDefault();
+    cartModal.classList.add("opened");
   }
 });
 
