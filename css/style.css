@@ -200,7 +200,7 @@ body {
   background-color: var(--basic-hover);
   padding: 0 22px 0 36px;
   position: relative;
-  margin: 0 0 0 10px;
+  margin: 0;
 }
 .main-cart .bookmark, .main-cart .cart {
   padding: 0 27px 0 45px;
@@ -1085,6 +1085,10 @@ body {
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
+  margin: 0;
+}
+.service p {
+  width: 400px;
 }
 .description-service {
   list-style: none;
@@ -1127,6 +1131,7 @@ body {
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
+  width: 275px;
 }
 .service-item input:checked + label {
   color: var(--basic-block-popular);
@@ -1163,6 +1168,7 @@ body {
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
+  width: 450px;
 }
 .description-company p:last-of-type {
   font-family: 'PT Sans', sans-serif;
@@ -1171,6 +1177,7 @@ body {
   color: var(--basic-black);
   padding: 13px 0 0 0;
   margin: 0;
+  width: 400px;
 }
 .description-company a {
   display: flex;
@@ -1215,11 +1222,12 @@ body {
   margin: 0;
   padding: 13px 0 11px 0;
 }
-.contact p {
+.contact p:first-of-type {
   font-family: 'PT Sans', sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
+  width: 210px;
 }
 .contact p:last-of-type {
   font-family: 'PT Sans', sans-serif;
@@ -1939,7 +1947,7 @@ body {
   padding-top: 65px;
   padding-bottom: 25px;
 }
-.description-perforators p {
+.description-perforators p:last-of-type {
   margin: 0;
   padding-bottom: 68px;
 }
@@ -2061,9 +2069,6 @@ body {
   height: 66px;
   background-image: url("../img/icons/icon-ok.svg");
   background-repeat: no-repeat;
-}
-.description-company {
-  width: 450px;
 }
 .contact {
   width: 300px;
