@@ -3,9 +3,11 @@ const mapLink = document.querySelector(".map-open");
 
 const feedbackModal = document.querySelector(".modal-feedback");
 const mapModal = document.querySelector(".modal-map");
+const cartModal = document.querySelector(".modal-cart");
 
 const feedbackModalClose = feedbackModal.querySelector(".modal-feedback .modal-close");
 const mapModalClose = mapModal.querySelector(".modal-map .modal-close");
+const cartModalClose = cartModal.querySelector(".modal-cart .modal-close");
 
 const feedbackForm = feedbackModal.querySelector(".feedback-form");
 const feedbackInputName = feedbackModal.querySelector(".feedback-name");
@@ -50,6 +52,10 @@ mapModalClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   mapModal.classList.remove("opened");
 });
+cartModalClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  cartModal.classList.remove("opened");
+});
 
 feedbackForm.addEventListener("submit", function (evt) {
   if (!feedbackInputName.value || !feedbackInputEmail.value || !feedbackInputMessage.value) {
@@ -65,6 +71,13 @@ feedbackForm.addEventListener("submit", function (evt) {
   }
 });
 
+window.addEventListener("click", function (evt) {
+  if (evt.target.classList.contains(`emerging-buy`)) {
+    evt.preventDefault();
+    cartModal.classList.add("opened");
+  }
+});
+
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === ESC_KEY) {
     if (feedbackModal.classList.contains("opened")) {
@@ -75,6 +88,10 @@ window.addEventListener("keydown", function (evt) {
     if (mapModal.classList.contains("opened")) {
       evt.preventDefault();
       mapModal.classList.remove("opened");
+    }
+    if (cartModal.classList.contains("opened")) {
+      evt.preventDefault();
+      cartModal.classList.remove("opened");
     }
   }
 });
