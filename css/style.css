@@ -588,16 +588,15 @@ body {
   margin: 0 0 0 0;
   list-style: none;
 }
-.slider-list li {
-  width: 620px;
-  height: 266px;
-}
+/*.slider-list li {*/
+/*  width: 620px;*/
+/*  height: 266px;*/
+/*}*/
 .slide-1 {
   background-image: url("../img/perforator.jpg");
 }
 .slide-2 {
   background-image: url("../img/drill.jpg");
-  display: none;
 }
 .slider-controls {
   position: absolute;
@@ -724,6 +723,14 @@ body {
   justify-content: center;
   align-items: center;
   width: 192px;
+}
+.slider-item {
+  width: 620px;
+  height: 266px;
+  display: none;
+}
+.slider-item.active {
+  display: block;
 }
 .slider-item a:hover,
 .slider-item a:focus {
@@ -1112,44 +1119,36 @@ body {
   margin: 29px 0 0 0;
   padding: 0;
 }
-.description-delivery {
-  /*display: none;*/
+.description-slide {
+  display: none;
   width: 619px;
   height: 100%;
-  display: flex;
   flex-direction: column;
   position: relative;
+}
+.description-slide.active {
+  display: flex;
+}
+.description-delivery {
   background-image: url(../img/icons/car.svg);
   background-repeat: no-repeat;
   background-position: 99% 77%;
 }
-.description-delivery p {
-  width: 275px;
-}
 .description-guarantee {
-  display: none;
-  width: 619px;
-  height: 100%;
-  /*display: flex;*/
-  flex-direction: column;
-  position: relative;
   background-image: url(../img/icons/guarantee.svg);
+  background-repeat: no-repeat;
+  background-position: 99% 77%;
+}
+.description-credit {
+  background-image: url(../img/icons/credit.svg);
   background-repeat: no-repeat;
   background-position: 99% 77%;
 }
 .description-guarantee p {
   width: 315px;
 }
-.description-credit {
-  display: none;
-  width: 619px;
-  height: 100%;
-  /*display: flex;*/
-  flex-direction: column;
-  position: relative;
-  background-image: url(../img/icons/credit.svg);
-  background-repeat: no-repeat;
-  background-position: 99% 77%;
+.description-delivery p {
+  width: 275px;
 }
 .description-credit a {
   display: flex;
@@ -1182,7 +1181,7 @@ body {
   background-color: var(--basic-white);
   box-shadow: 0 1px 0 var(--basic-white);
 }
-.service-item button:hover {
+.service-item button:hover:not(.current) {
   color: var(--basic-white);
   background-color: var(--basic-header-rest);
   box-shadow: 0 1px 0 var(--basic-shadow-block-service), inset 0 1px 0 var(--basic-shadow-block-service2);

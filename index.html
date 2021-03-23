@@ -5,8 +5,8 @@
   <title>HTML Academy: Техномарт</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link type="text/css" href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link type="text/css" href="css/normalize.css" rel="stylesheet">
-  <link type="text/css" href="css/style.css" rel="stylesheet">
+  <link type="text/css" href="css/normalize.min.css" rel="stylesheet">
+  <link type="text/css" href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -111,14 +111,17 @@
           <a href="#">бесплатно</a>
         </li>
         <li class="categories-slider">
+
+
           <ul class="slider-list">
-            <li class="slider-item slide-1">
+            <li class="slider-item active slide-1">
               <div class="text-slider">
                 <h2>Перфораторы</h2>
                 <p>Настоящие мужские игрушки</p>
               </div>
               <a class="button-red" href="catalog.html">Открыть каталог</a>
             </li>
+
             <li class="slider-item slide-2">
               <div class="text-slider">
                 <h2>Дрели</h2>
@@ -128,9 +131,12 @@
             </li>
           </ul>
           <div class="slider-controls">
-            <button type="button" aria-label="Первый слайд"></button>
-            <button class="current" type="button" aria-label="Второй слайд"></button>
+            <button class="catalog-button current" type="button" data-slide-categories="0" aria-label="Первый слайд"></button>
+            <button class="catalog-button" type="button" data-slide-categories="1" aria-label="Второй слайд"></button>
           </div>
+
+
+
           <div class="slider-button">
             <button class="gallery-button gallery-button-back" type="button" aria-label="Предыдущий слайд"><svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.07568 39.0585L0.0775032 37.0107L17.0931 19.5639L0.0220242 2.06243L2.02115 0.0146294L21.0894 19.5639L2.07568 39.0585Z" fill="white"/>
@@ -257,37 +263,37 @@
       <div class="service-box">
           <ul class="service-list">
             <li class="service-item">
-              <button class="current" type="button">Доставка</button>
+              <button class="current service-button" type="button" data-slide-index="0">Доставка</button>
 <!--                <input id="servis1" type="radio" name="servis" value="Доставка">-->
 <!--                <label for="servis1">Доставка</label>-->
             </li>
             <li class="service-item">
-              <button type="button">Гарантия</button>
+              <button class="service-button" type="button" data-slide-index="1">Гарантия</button>
 <!--                <input id="servis2" type="radio" checked name="servis" value="Гарантия">-->
 <!--                <label for="servis2">Гарантия</label>-->
             </li>
             <li class="service-item">
-              <button type="button">Кредит</button>
+              <button class="service-button" type="button" data-slide-index="2">Кредит</button>
 <!--                <input id="servis3" type="radio" name="servis" value="Кредит" />-->
 <!--                <label for="servis3">Кредит</label>-->
             </li>
           </ul>
         <ul class="description-service">
-          <li class="description-delivery">
+          <li class="description-delivery description-slide active">
             <h2>Доставка</h2>
             <p>Мы с удовольствием доставим ваш товар прямо
               к вашему подъезду совершенно бесплатно!
               Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!</p>
           </li>
-          <li class="description-guarantee">
+          <li class="description-guarantee description-slide">
             <h2>Гарантия</h2>
             <p>Если купленный у нас товар поломается или заискрит,
               а также в случае пожара, спровоцированного его возгоранием,
               вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший
               товар на новый. Дом уж восстановите как-нибудь сами.</p>
           </li>
-          <li class="description-credit">
+          <li class="description-credit description-slide">
             <h2>Кредит</h2>
             <p>Залезть в долговую яму стало проще!
               Кредитные консультанты придут вам на помощь.</p>
@@ -477,8 +483,7 @@
     </div>
   </div>
 </section>
-<script src="js/form.js"></script>
-<script src="js/cart.js"></script>
+<script src="js/form.min.js"></script>
 </body>
 </html>
 

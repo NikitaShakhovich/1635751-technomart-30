@@ -76,6 +76,16 @@ window.addEventListener("click", function (evt) {
     evt.preventDefault();
     cartModal.classList.add("opened");
   }
+  if (evt.target.classList.contains(`service-button`)) {
+    toggleSlide(evt.target);
+  }
+  if (evt.target.classList.contains(`catalog-button`)) {
+    toggleSlideCategories(evt.target);
+  }
+  if (evt.target.classList.contains(`gallery-button`) || evt.target.closest("button.gallery-button")) {
+    const btn = evt.target.classList.contains(`gallery-button`) ? evt.target : evt.target.closest("button.gallery-button");
+    toggleNextSliderButton(btn);
+  }
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -95,3 +105,46 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+const toggleSlide = (clickedButton) => {
+  const activeSlide = document.querySelector(".description-slide.active");
+  const activeButton = document.querySelector(".service-button.current");
+  activeSlide.classList.remove("active");
+  activeButton.classList.remove("current");
+  clickedButton.classList.add("current");
+  const indexSlide = clickedButton.dataset.slideIndex;
+  const allSlide = document.querySelectorAll(".description-slide");
+  const nextActiveSlide = allSlide[indexSlide];
+  nextActiveSlide.classList.add("active");
+}
+const toggleSlideCategories = (clickedButtonCategories) => {
+  const activeSlideCategories = document.querySelector(".slider-item.active");
+  const activeButtonCategories = document.querySelector(".catalog-button.current");
+  activeSlideCategories.classList.remove("active");
+  activeButtonCategories.classList.remove("current");
+  clickedButtonCategories.classList.add("current");
+  const indexSlideCategories = clickedButtonCategories.dataset.slideCategories;
+  const allSlideCategories = document.querySelectorAll(".slider-item");
+  const nextActiveSlideCategories = allSlideCategories[indexSlideCategories];
+  nextActiveSlideCategories.classList.add("active");
+}
+
+const toggleNextSliderButton = (element) => {
+  const allSlide = document.querySelectorAll(".slider-item");
+  const allSlideBtn = document.querySelectorAll(".catalog-button");
+  let activeIndex = 0;
+  allSlide.forEach((it, index) => {
+    return activeIndex = it.classList.contains("active") ? index : activeIndex;
+  })
+  allSlide[activeIndex].classList.remove("active")
+  allSlideBtn[activeIndex].classList.remove("current")
+
+  if (element.classList.contains("gallery-button-back")) {
+    const nextSlideIndex = activeIndex - 1 < 0 ? allSlide.length - 1 : activeIndex - 1;
+    allSlide[nextSlideIndex].classList.add("active");
+    allSlideBtn[nextSlideIndex].classList.add("current");
+  } else {
+    const nextSlideIndex = activeIndex + 1 > allSlide.length - 1 ? 0 : activeIndex + 1;
+    allSlide[nextSlideIndex].classList.add("active");
+    allSlideBtn[nextSlideIndex].classList.add("current");
+  }
+}
