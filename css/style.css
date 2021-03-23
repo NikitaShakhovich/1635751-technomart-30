@@ -530,7 +530,7 @@ body {
 }
 .categories-materials {
   background-color: var(--basic-category-materials);
-  grid-area: o1;
+  /*grid-area: o1;*/
 }
 .categories-item::before {
   content: "";
@@ -548,28 +548,28 @@ body {
 }
 .categories-tool {
   background-color: var(--basic-category-tools);
-  grid-area: o2;
+  /*grid-area: o2;*/
 }
 .categories-tool::before {
   background-image: url("../img/icons/icon-catalog-2.svg");
 }
 .categories-technics {
   background-color: var(--basic-category-technic);
-  grid-area:o3;
+  /*grid-area:o3;*/
 }
 .categories-technics::before {
   background-image: url("../img/icons/icon-catalog-3.svg");
 }
 .categories-sale {
   background-color: var(--basic-category-sale);
-  grid-area: o5;
+  /*grid-area: o5;*/
 }
 .categories-sale::before {
   background-image: url("../img/icons/icon-catalog-4.svg");
 }
 .categories-delivery {
   background-color: var(--basic-category-delivery);
-  grid-area:o6;
+  /*grid-area:o6;*/
 }
 .categories-delivery::before {
   background-image: url("../img/icons/icon-catalog-5.svg");
@@ -1046,9 +1046,9 @@ body {
   height: 279px;
   background-image: radial-gradient(at 100%, var(--basic-gradient-service), transparent 10px);
 }
-.service-item input {
-  display: none;
-}
+/*.service-item input {*/
+/*  display: none;*/
+/*}*/
 .service-box {
   display: flex;
   flex-direction: row;
@@ -1058,7 +1058,8 @@ body {
 .service-item {
   box-sizing: border-box;
 }
-.service-item label {
+/*.service-item label {*/
+.service-item button {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1073,6 +1074,8 @@ body {
   color: var(--basic-white);
   background-color: var(--basic-nav-rest);
   box-shadow: 0 1px 0 var(--basic-shadow-block-service), inset 0 1px 0 var(--basic-shadow-block-service2);
+  border: none;
+  cursor: pointer;
 }
 .grid-service h2, .description-perforators h2 {
   color: var(--basic-black);
@@ -1110,10 +1113,10 @@ body {
   padding: 0;
 }
 .description-delivery {
-  display: none;
+  /*display: none;*/
   width: 619px;
   height: 100%;
-  /*display: flex;*/
+  display: flex;
   flex-direction: column;
   position: relative;
   background-image: url(../img/icons/car.svg);
@@ -1124,10 +1127,10 @@ body {
   width: 275px;
 }
 .description-guarantee {
-  /*display: none;*/
+  display: none;
   width: 619px;
   height: 100%;
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
   position: relative;
   background-image: url(../img/icons/guarantee.svg);
@@ -1174,12 +1177,12 @@ body {
   line-height: 24px;
   color: var(--basic-black);
 }
-.service-item input:checked + label {
+.service-item .current {
   color: var(--basic-block-popular);
   background-color: var(--basic-white);
   box-shadow: 0 1px 0 var(--basic-white);
 }
-.service-item label:hover {
+.service-item button:hover {
   color: var(--basic-white);
   background-color: var(--basic-header-rest);
   box-shadow: 0 1px 0 var(--basic-shadow-block-service), inset 0 1px 0 var(--basic-shadow-block-service2);
